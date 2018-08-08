@@ -156,6 +156,10 @@ body .entry-content p, body .entry-content ul li {
 	font-size: 1.25rem;
 }
 
+body .entry-content h1, body .entry-content h2, body .entry-content h3, body .entry-content h4, body .entry-content h5 {
+font-weight: bold;
+}
+
 .article-header .post-categories a {
 	border: 1px solid #F60E33;
     color: #F60E33;
