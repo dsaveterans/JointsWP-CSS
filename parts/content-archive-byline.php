@@ -1,6 +1,6 @@
 <?php
 /**
- * The template part for displaying an author byline
+ * The template part for displaying an author byline in the archive
  */
 ?>
 
