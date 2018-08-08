@@ -151,9 +151,9 @@ body .article-header h1 {
   margin: 0;
 }
 
-body .entry-content p {
+body .entry-content p, body .entry-content ul li {
 	color: #111;
-  font-size: 1.25rem;
+	font-size: 1.25rem;
 }
 
 .article-header .post-categories a {
