@@ -223,6 +223,10 @@ font-weight: bold;
 	background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
+.type-page .entry-content p, .type-page .entry-content ul {
+    width: 66%;
+    margin: 1rem auto;
+}
 
 .entry-content img {
   max-width: 100%;
