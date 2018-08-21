@@ -1,35 +1,22 @@
 <?php 
 /*
-Template Name: Homepage - 1
+Template Name: Homepage - 2
 */
 
 get_header(); ?>
 
 
-	<div id="homepage-1" class="homepage-backdrop grid-x grid-margin-x">
+	<div id="homepage-2" class="homepage-backdrop grid-x grid-margin-x">
 
 		<style>.off-canvas-content { background-image: url('<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url( 'full' ); } else { echo '#fff'; } ?> '); background-size: cover; background-position: center 40%;}</style>
 
 		<div class="homepage-feature-container small-12 medium-12 large-12">
 			<div class="grid-container">
 				<div class="grid-x grid-margin-x grid-padding-x">
-					<div class="small-12 medium-6 large-8 cell homepage-hometitle">
-						<?php if ( is_active_sidebar( 'hometitle' ) ) : ?>
-							<?php dynamic_sidebar( 'hometitle' ); ?>
-						<?php else : ?>
-
-							<!-- This content shows up if there are no widgets defined in the backend. -->
-												
-							<div class="alert help">
-								<p><?php _e( 'Please activate Homepage Title Widget.', 'jointswp' );  ?></p>
-							</div>
-
-						<?php endif; ?>
-					</div>
-					<div class="small-12 medium-6 large-4 cell homepage-feature">
+					<div class="small-12 medium-12 large-8 cell homepage-feature end">
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							<header class="article-header">
-								<h1 class="page-title"><div class="grid-container"><?php the_title(); ?></div></h1>
+								<h1 class="page-title"><?php the_title(); ?></h1>
 							</header>
 			    		<?php get_template_part( 'parts/loop', 'page-full' ); ?>
 			    		<?php endwhile; endif; ?>	

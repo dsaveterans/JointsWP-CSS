@@ -8,13 +8,13 @@ Stylesheet: Global Stylesheet
 TYPOGRAPHY
 *********************/
 
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
 
-header, body, p, h1.txt-medium, h2.txt-medium, h3.txt-medium, h4.txt-medium, h5.txt-medium {font-family: Work Sans, Roboto, Helvetica, Arial, system-ui, "Segoe UI",  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";}
+header, body, p, h1.txt-medium, h2.txt-medium, h3.txt-medium, h4.txt-medium, h5.txt-medium {font-family: 'Work Sans', Roboto, Helvetica, Arial, system-ui, "Segoe UI",  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";}
 
-h1, h2, h3, h4, h5 {font-family: Work Sans, Roboto, Helvetica, Arial, system-ui, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";}
+h1, h2, h3, h4, h5 {font-family: 'Work Sans', Roboto, Helvetica, Arial, system-ui, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";}
 
-b, strong, h1 small, h2 small, h3 small, h4 small, h5 small, h1.txt-bold, h2.txt-bold, h3.txt-bold, h4.txt-bold, h5.txt-bold, #homepage-1 .homepage-hometitle h4 {font-family: Work Sans, Roboto, Helvetica, Arial, system-ui, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 800; font-weight: bold;}
+b, strong, h1 small, h2 small, h3 small, h4 small, h5 small, h1.txt-bold, h2.txt-bold, h3.txt-bold, h4.txt-bold, h5.txt-bold, #homepage-1 .homepage-hometitle h4 {font-family: 'Work Sans', Roboto, Helvetica, Arial, system-ui, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 800; font-weight: bold;}
 
 /*********************
 NAVIGATION CHANGES
@@ -225,9 +225,11 @@ font-weight: bold;
 	background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
-.type-page .entry-content p, .type-page .entry-content ul {
-    width: 66%;
-    margin: 1rem auto;
+@media print, screen and (min-width: 40em) { 
+	.type-page .entry-content p, .type-page .entry-content ul {
+   	 width: 66%;
+   	 margin: 1rem auto;
+	}
 }
 
 .entry-content img {
@@ -296,6 +298,7 @@ font-weight: bold;
 
 .button.clear, .button.clear.disabled, .button.clear:focus, .button.clear:focus.disabled, .button.clear:focus[disabled], .button.clear:hover, .button.clear:hover.disabled, .button.clear:hover[disabled], .button.clear[disabled] {
 	box-shadow: none;
+	color: #777;
 }
 
 /*********************
@@ -543,9 +546,9 @@ COMMENT FORM STYLES
   margin: 0 20px 1.1em; }
 
 /*********************
-HOMEPAGE - 1
+HOMEPAGE
 *********************/
-#homepage-1.homepage-backdrop {
+#homepage-1.homepage-backdrop, #homepage-2.homepage-backdrop {
   padding: 6rem 0 0 0;
   min-height: 100vh;
 }
@@ -555,17 +558,9 @@ HOMEPAGE - 1
   text-shadow: 0px 6px 3px rgba(0,0,0,0.15);
 }
 
- @media print, screen and (min-width: 40em) {
- 	#homepage-1 .homepage-hometitle h4.widgettitle {
- 		font-size: 6rem;
- 	}
- }
-
- @media print, screen and (max-width: 39.9em) {
-  	#homepage-1 .homepage-hometitle h4.widgettitle {
-  		font-size: 5rem;
-  	}
- }
+#homepage-1 .homepage-hometitle h4.widgettitle, #homepage-2 h1.page-title {
+ 	font-size: 5rem;
+}
 
 #homepage-1 .homepage-hometitle p {
 	color: white;
@@ -578,7 +573,7 @@ HOMEPAGE - 1
 	padding: 0 0.5em;
 }
 
-#homepage-1 .homebar {
+#homepage-1 .homebar, #homepage-2 .homebar {
 	color: #677086;
 	border: 1px solid #ddd;
 	box-shadow: 0px 6px 3px rgba(0,0,0,0.15);
@@ -590,10 +585,10 @@ HOMEPAGE - 1
 	margin-bottom: 1.5rem;
 }
 
-#homepage-1 .homebar h4.widgettitle {
+#homepage-1 .homebar h4.widgettitle, #homepage-2 .homebar h4.widgettitle {
 	color: #21262C;
 	font-size: 2rem;
-font-weight: 400;
+	font-weight: 400;
 }
 
 #homepage-1 .homepage-feature {
@@ -612,7 +607,7 @@ font-weight: 400;
 	font-size: 1rem;
 }
 
-#homepage-1 .homepage-feature .entry-content p, body .homepage-feature .article-header h1, body .homepage-feature .article-header h2, body .homepage-feature .article-header ul {
+#homepage-1 .homepage-feature .entry-content p, body .homepage-feature .article-header h1, body .homepage-feature .article-header h2, body .homepage-feature .article-header ul, #homepage-2 .entry-content p {
 	color: #fff;
 }
 
@@ -627,9 +622,12 @@ font-weight: 400;
  	display: block;
 }
 
-.page-template-template-homepage-1 footer {
+.page-template-template-homepage-1 footer, .page-template-template-homepage-2 footer {
 	margin-top: 3rem;
+	color: #fff;
 }
+
+
 
 /*********************
 SIDEBARS & ASIDES
